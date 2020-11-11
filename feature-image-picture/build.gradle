@@ -1,23 +1,23 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
+
 
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "ru.ashilkin.picturecoloring"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -52,7 +52,7 @@ dependencies {
     implementation ui.material
     implementation ui.constraintLayout
 
-    //modules
-    implementation project(':feature-image-picture')
-
+    testImplementation test.junit
+    androidTestImplementation test.androidTestJUnit
+    androidTestImplementation test.espressoCore
 }
