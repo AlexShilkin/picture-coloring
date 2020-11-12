@@ -3,11 +3,15 @@ package ru.ashilkin.picturecoloring.app
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import ru.ashilkin.picturecoloring.app.di.DaggerAppComponent
 
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+        DaggerAppComponent.factory()
+            .create(this)
     }
 
 

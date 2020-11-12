@@ -44,7 +44,7 @@ dependencies {
     implementation general.kotlinStdlib
     implementation general.coreKtx
     implementation general.kotlinCoroutinesAndroid
-    implementation general.daggerCompiler
+    kapt general.daggerCompiler
     implementation general.dagger
     implementation general.multidex
 
@@ -55,4 +55,6 @@ dependencies {
     testImplementation test.junit
     androidTestImplementation test.androidTestJUnit
     androidTestImplementation test.espressoCore
+
+    implementation project(':core-ui')
 }

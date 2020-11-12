@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import ru.ashilkin.featureimagepicture.R
 
 class ImagePictureFragment : Fragment() {
 
@@ -13,6 +14,7 @@ class ImagePictureFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        val view = inflater.inflate(R.layout.fragment_image_picture, container, false)
+        return view
     }
 }
