@@ -4,11 +4,12 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import ru.ashilkin.featureimagepicture.dependencies.ImagePictureDependencies
+import ru.ashilkin.picturecoloring.main.dependencies.MainDependencies
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [AppModule::class])
-interface AppComponent : ImagePictureDependencies {
+interface AppComponent : MainDependencies, ImagePictureDependencies {
 
     @Component.Factory
     interface Factory {

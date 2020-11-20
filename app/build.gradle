@@ -47,6 +47,7 @@ dependencies {
     kapt general.daggerCompiler
     implementation general.dagger
     implementation general.multidex
+    implementation general.cicerone
 
     implementation ui.appcompat
     implementation ui.material
